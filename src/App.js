@@ -2,24 +2,24 @@ import "./App.css";
 import "@royalnavy/css-framework/dist/styles.css";
 import { Button, CheckboxEnhanced, TextInput } from "./components/index.ts";
 import { Fragment } from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Field } from "formik";
 import * as Yup from "yup";
 import { withFormik } from "./enhancers/withFormik";
 
 const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
 const SignupSchema = Yup.object().shape({
-  firstName: Yup.string()
-    .min(2, "Too Short!")
-    .max(70, "Too Long!")
+  firstName: Yup.string().matches(/[a-zA-Z]/, "please enter a valid first name")
+    .min(2, "Please enter a name of 2 characters or more")
+    .max(20, "Please enter a name of 20 characters or less")
     .required("Please enter a first name"),
-  surName: Yup.string()
-    .min(2, "Too Short!")
-    .max(70, "Too Long!")
-    .required("Please enter a surname"),
+  surName: Yup.string().matches(/[a-zA-Z]/, "please enter a valid surname")
+  .min(2, "Please enter a  surname of 2 characters or more")
+  .max(20, "Please enter a surname of 20 characters or less")
+  .required("Please enter a surname"),
   telephone: Yup.string()
     .matches(phoneRegExp, "please enter a valid telephone number")
-    .min(2, "Too Short!")
-    .max(70, "Too Long!")
+    .min(2, "please enter a telephone number of 2 or more digits")
+    .max(15, "Please enter a telephone number of 15 digits or less")
     .required("Please enter a telephone number"),
   email: Yup.string()
     .email("Please enter a valid email address")
@@ -70,7 +70,7 @@ function App() {
               />
 
               <Field
-                autoFocus
+                //autoFocus
                 data-cy="first-name"
                 name="firstName"
                 label="First Name"

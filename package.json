@@ -105,7 +105,8 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "requirements": "node -e \"require('./cypress/requirements/requirements.js').getDescriptionsFromJira('INFSAAS-468')\""
   },
   "eslintConfig": {
     "extends": [
@@ -131,6 +132,9 @@
     "@storybook/addon-links": "^6.1.21",
     "@storybook/node-logger": "^6.1.21",
     "@storybook/react": "^6.1.21",
-    "cypress": "^6.6.0"
+    "@types/chai": "4.2.15",
+    "@types/jquery": "3.5.5",
+    "cypress": "^6.6.0",
+    "fs": "0.0.1-security"
   }
 }

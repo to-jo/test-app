@@ -24,10 +24,15 @@
     "target": "esnext",
     "allowJs": true,
     "noFallthroughCasesInSwitch": true,
-    "noEmit": true
+    "types": [
+      "cypress",
+      "jQuery"
+    ]
   },
   "include": [
     "src",
-    "jest"
+    "cypress",
+    "jest",
+    "**/*.ts"
   ]
 }

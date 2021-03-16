@@ -4,7 +4,7 @@ import { Field, Formik, Form } from 'formik'
 import React from 'react'
 import * as yup from 'yup'
 
-import { IconSearch, IconCrop, IconSave } from '@royalnavy/icon-library'
+import { IconSearch, IconCrop } from '@royalnavy/icon-library'
 import { Button } from '../Button'
 import { TextInput } from '.'
 
