@@ -106,7 +106,7 @@
     "build-storybook": "build-storybook -s public",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "requirements": "node -e \"require('./cypress/requirements/requirements.js').getDescriptionsFromJira('INFSAAS-468')\""
+    "requirements": "node -e \"require('./cypress/requirements/requirements.js').getDescriptionsFromJira()\""
   },
   "eslintConfig": {
     "extends": [
