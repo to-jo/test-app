@@ -67,6 +67,8 @@ export const TextInput: React.FC<TextInputProps> = (props) => {
   const { hasFocus, onLocalBlur, onFocus } = useFocus(onBlur)
   const { committedValue, hasValue, onValueChange } = useInputValue(value)
   const hasLabel = label && label.length
+  const testlabel = "label-" + label
+  const testID = 'div-' + name
 
   return (
     <StyledTextInput
@@ -74,7 +76,7 @@ export const TextInput: React.FC<TextInputProps> = (props) => {
       $hasFocus={hasFocus}
       $hasContent={hasValue}
       $noLabel={!hasLabel}
-      data-testid="text-input-container"
+      data-cy={testID}
     >
       <StyledOuterWrapper>
         {startAdornment && (
@@ -82,7 +84,7 @@ export const TextInput: React.FC<TextInputProps> = (props) => {
         )}
         <StyledInputWrapper data-testid="text-input-input-wrapper">
           {hasLabel && (
-            <StyledLabel htmlFor={id} data-testid="text-input-label">
+            <StyledLabel htmlFor={id} data-cy={testlabel}>
               {label}
             </StyledLabel>
           )}

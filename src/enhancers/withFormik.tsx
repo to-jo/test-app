@@ -64,7 +64,7 @@ const StyledFieldError = styled.div`
 `
 
 export const FieldError: React.FC<FieldErrorProps> = (props) => (
-  <StyledFieldError data-testid="error" {...props} />
+  <StyledFieldError data-cy="error" {...props} />
 )
 
 export const withFormik = (FormComponent: React.FC<any> | string) => ({
