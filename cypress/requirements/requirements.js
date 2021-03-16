@@ -16,7 +16,7 @@ module.exports = {
   },
   getDescriptionsFromJira(jiraID) {
     const url =
-    'https://code.waters.com/jira/rest/api/2/search?jql=project%20%3D%20"Informatics%20Software%20as%20a%20Service"%20AND%20issuetype%20%3D%20Requirement%20AND%20status%20in%20(done%2C%20"In%20Review")&fields=description';
+    process.env.jUrl + '/jira/rest/api/2/search?jql=project%20%3D%20"Informatics%20Software%20as%20a%20Service"%20AND%20issuetype%20%3D%20Requirement%20AND%20status%20in%20(done%2C%20"In%20Review")&fields=description';
     fetch(url, {
       method: "GET",
       headers: {
