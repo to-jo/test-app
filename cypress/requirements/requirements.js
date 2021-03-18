@@ -21,7 +21,7 @@ module.exports = {
     fetch(url, {
       method: "GET",
       headers: {
-        Authorization: "Basic dG9ueS5qb25lczRAZ21haWwuY29tOm82TXdodms2a082Z1RjRXBENjRSNzhDNg==",
+        Authorization: process.env.creds,
         Accept: "application/json",
       },
     })
