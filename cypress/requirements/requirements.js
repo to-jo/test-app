@@ -6,21 +6,22 @@ module.exports = {
 
   jiraLink(jiraID){
     let jsonData = require('../../matrix.json');
-    let desc = jsonData.issues
-    let myFilteredData = desc.filter(function(obj) {
+    let issues = jsonData.issues
+    let req = issues.filter(function(obj) {
       return obj.key === jiraID;
     });
-    let descirption = JSON.stringify(myFilteredData[0].fields.description);
-    return jiraID + " - " + descirption
+    let reqUrl = "\r\n" + JSON.stringify(req[0].self);
+    let descirption = JSON.stringify(req[0].fields.description);
+    return jiraID + " - " + descirption + "\n\r" + reqUrl
 
   },
   getDescriptionsFromJira(jiraID) {
     const url =
-    process.env.jUrl + '/jira/rest/api/2/search?jql=project%20%3D%20"Informatics%20Software%20as%20a%20Service"%20AND%20issuetype%20%3D%20Requirement%20AND%20status%20in%20(done%2C%20"In%20Review")&fields=description';
+    'https://tojowa.atlassian.net/rest/api/2/search?jql=issuetype%20%3D%20Requirement%20and%20status%20in%20("In%20Progress"%2C%20"done")&fields=description';
     fetch(url, {
       method: "GET",
       headers: {
-        Authorization: process.env.jiracred,
+        Authorization: "Basic dG9ueS5qb25lczRAZ21haWwuY29tOm82TXdodms2a082Z1RjRXBENjRSNzhDNg==",
         Accept: "application/json",
       },
     })

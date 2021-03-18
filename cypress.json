@@ -1,7 +1,11 @@
 {
     "baseUrl": "http://localhost:3000",
-    "reporter": "junit",
+    "reporter": "mochawesome",
     "reporterOptions": {
-      "mochaFile": "results/my-test-output-[hash].xml"
-    }
+      "reportDir": "cypress/results",
+      "overwrite": false,
+      "html": false,
+      "json": true
+    },
+    "integrationFolder": "cypress/integration/component"
 }

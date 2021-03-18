@@ -24,3 +24,10 @@ yarn-debug.log*
 yarn-error.log*
 cypress/videos/*
 results/*
+
+mochawesome-report/*
+cypress/results/*
+test-results.xml
+mochawesome.json
+matrix.json
+combined-report.xml
