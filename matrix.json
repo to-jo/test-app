@@ -1,0 +1,17 @@
+{
+  "expand": "names,schema",
+  "startAt": 0,
+  "maxResults": 50,
+  "total": 1,
+  "issues": [
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "10007",
+      "self": "https://tojowa.atlassian.net/rest/api/2/issue/10007",
+      "key": "MNA-1",
+      "fields": {
+        "description": "As a product owner\r\nI want users to sign up for emails\r\nSo we can inform them when we have news to share"
+      }
+    }
+  ]
+}
