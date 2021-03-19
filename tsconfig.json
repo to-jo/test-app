@@ -27,12 +27,16 @@
     "types": [
       "cypress",
       "jQuery"
-    ]
+    ],
+    "noEmit": true
   },
   "include": [
     "src",
     "cypress",
     "jest",
     "**/*.ts"
+  ],
+  "exclude": [
+    "requirements/*"
   ]
 }

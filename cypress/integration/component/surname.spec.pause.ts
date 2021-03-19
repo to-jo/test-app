@@ -6,7 +6,7 @@ describe("surname field", () => {
     cy.visit("/");
   });
 
-context(requirements.jiraLink('INFSAAS-3'),()=>{
+context(requirements.jiraLink('MNA-1'),()=>{
 
     it('should have the label of "Surname"', () => {
       cy.get('[data-cy="label-Surname"]').should("have.text", "Surname");
