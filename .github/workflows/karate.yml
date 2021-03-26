@@ -18,16 +18,17 @@ jobs:
           responseCode: 200
           timeout: 60000
           interval: 1000
-      - name: debug
-        run: ls
+
       - name: debug 2
         run: cd API/test && ls
       - name: run tests
         run: cd API && npm run test
+      - name: debug
+        run: ls
       - name: output artifacts
         uses: actions/upload-artifact@v2
         with:
           name: Karate
-          path: API/target/karate-reports/
+          path: ./API/target/karate-reports/
 
       
