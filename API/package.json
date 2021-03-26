@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src",
-    "test": "karate ./test/add_user.feature"
+    "test": "cd .. && java -jar karate.jar  \".\\API\\test\\add_user.feature\""
   },
   "keywords": [],
   "author": "",
