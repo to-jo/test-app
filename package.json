@@ -107,12 +107,15 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run --spec \"cypress/integration/component/*.spec.ts\"  --reporter junit --reporter-options \"mochaFile=results/my-test-output-[hash].xml,testCaseSwitchClassnameAndName=false\" && jrm ./results/combined-report.xml \"./results/my-test-output-*.xml\"",
+    "cypress:run": "cypress run --spec \"cypress/integration/component/*\"  --reporter junit --reporter-options \"mochaFile=results/my-test-output-[hash].xml,testCaseSwitchClassnameAndName=false\" && jrm ./results/combined-report.xml \"./results/my-test-output-*.xml\"",
+    "cypress:cuke": "cypress run --spec \"cypress/integration/component/*\"  --reporter cucumber --reporter-options \"mochaFile=results/my-test-output-[hash].xml,testCaseSwitchClassnameAndName=false\" && jrm ./results/combined-report.xml \"./results/my-test-output-*.xml\"",
     "requirements": "node -e \"require('./cypress/requirements/requirements.js').getDescriptionsFromJira()\"",
     "cypress:awesome": "cypress run --reporter mochawesome --reporter-options reportDir=\"cypress/results\",overwrite=,html=false,json=true",
     "merge": "npx mochawesome-merge \"cypress/results/*.json\" > mochawesome.json",
     "report": "npx marge mochawesome.json",
-    "magic": "npm run cypress:awesome && npm run merge && npm run report"
+    "magic": "npm run cypress:awesome && npm run merge && npm run report",
+    "start:api": "cd API && npm run start",
+    "test:api": "cd API && npm run test"
   },
   "eslintConfig": {
     "extends": [
@@ -148,7 +151,7 @@
     "@storybook/react": "^6.1.21",
     "@types/chai": "4.2.15",
     "@types/jquery": "3.5.5",
-    "cypress": "^6.6.0",
+    "cypress": "^6.8.0",
     "cypress-cucumber-preprocessor": "^4.0.1",
     "fs": "0.0.1-security",
     "junit-report-merger": "^2.2.1",

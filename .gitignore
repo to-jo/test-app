@@ -21,3 +21,5 @@ combined-report.xml
 API/node_modules/*
 API/target
 build
+Assets
+target

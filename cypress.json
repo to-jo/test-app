@@ -7,7 +7,7 @@
       "html": false,
       "json": true
     },
-    "integrationFolder": "cypress/integration/component",
+    "integrationFolder": "cypress/integration/",
     "retries": 1,
-    "testFiles": ["**/*.spec.*", "**/*.feature"]
+    "testFiles": ["component/*.spec.*", "component/*.feature", "journey/*.spec.ts"]
 }
