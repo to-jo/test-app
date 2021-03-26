@@ -1,0 +1,17 @@
+name: API tests
+on: [pull_request, commit]
+jobs:
+  karate-run:
+    name: karate run
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: npm install
+        run: cd API && npm install  
+      - name: start API  
+        run: npm run start &
+        name: run tests
+        run: npm run test
+
+      
