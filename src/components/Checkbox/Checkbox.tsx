@@ -54,10 +54,10 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
         $isDisabled={isDisabled}
         $isInvalid={isInvalid}
         className={className}
-        data-testid="container"
+        data-cy="checkbox"
       >
         <StyledOuterWrapper>
-          <StyledLabel htmlFor={id} data-testid="label">
+          <StyledLabel htmlFor={id} data-testid={name}>
             <StyledInput
               $isDisabled={isDisabled}
               ref={ref}

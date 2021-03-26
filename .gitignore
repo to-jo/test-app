@@ -18,3 +18,8 @@ mochawesome.json
 matrix.json
 combined-report.xml
 .env
+API/node_modules/*
+API/target
+build
+Assets
+target
