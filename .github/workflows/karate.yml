@@ -10,7 +10,7 @@ jobs:
       - name: npm install
         run: cd API && npm install  
       - name: start API  
-        run: cd API npm run start
+        run: cd API && npm run start &
       - name: wait for api  
         uses: nev7n/wait_for_response@v1
         with:
