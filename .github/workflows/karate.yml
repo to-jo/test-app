@@ -11,7 +11,7 @@ jobs:
         run: cd API && npm install  
       - name: start API  
         run: npm run start &
-        name: run tests
+      - name: run tests
         run: npm run test
 
       
