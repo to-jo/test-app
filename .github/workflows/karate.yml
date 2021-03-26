@@ -1,5 +1,5 @@
 name: API tests
-on: [pull_request, commit]
+on: [pull_request, push]
 jobs:
   karate-run:
     name: karate run
