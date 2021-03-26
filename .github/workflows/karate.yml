@@ -10,8 +10,8 @@ jobs:
       - name: npm install
         run: cd API && npm install  
       - name: start API  
-        run: npm run start &
+        run: cd API npm run start &
       - name: run tests
-        run: npm run test
+        run: cd API && npm run test
 
       
