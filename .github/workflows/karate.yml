@@ -14,7 +14,7 @@ jobs:
       - name: debug
         run: ls
       - name: debug 2
-        run: cd API/test & ls
+        run: cd API/test ls
       - name: run tests
         run: cd API && npm run test
 
