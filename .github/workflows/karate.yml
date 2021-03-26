@@ -25,7 +25,7 @@ jobs:
       - name: run tests
         run: cd API && npm run test
       - name: output artifacts
-      - uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: Karate
           path: API/target/karate-reports/
