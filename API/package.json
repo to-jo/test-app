@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src",
-    "test": "karate ./test/add_user.feature"
+    "test": "cd .. && java -jar karate.jar  API/test"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,8 @@
     "helmet": "^4.4.1",
     "mongodb": "^3.6.5",
     "mongodb-memory-server": "^6.9.6",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.0"
   }
 }

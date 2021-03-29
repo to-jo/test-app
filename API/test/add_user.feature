@@ -1,4 +1,4 @@
-@storykey=MNA-1
+@ci
 Feature: can add a user
 
 Scenario: successfully adding a user returns an _id and the data can be returned using the id
